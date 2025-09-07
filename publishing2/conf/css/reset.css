@@ -1,0 +1,59 @@
+/* reset */
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: initial;
+}
+*, :after, :before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+:root{
+	overflow-wrap: break-word;
+	word-break: break-word;
+}
+div, span{
+	display: inline-block;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+a, a:focus, img{
+	border: 0;
+}
+textarea{
+	backface-visibility: hidden;
+	border: 0;
+	word-break: keep-all;
+	word-wrap: break-word;
+}
+ul, li, ol, dd, dl{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+button, button:focus, input, input:focus{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	box-shadow: none;
+}
+table, thead, tbody, tr, th, td{
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	word-break: break-all;
+}
+form, input, select, textarea, h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+	padding: 0;
+}
+

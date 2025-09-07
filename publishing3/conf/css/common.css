@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+/**font(NanumNeo)**/
+@font-face {
+	font-family: 'Neo';
+	src: url('../font/NanumSquareNeoTTF-bRg.woff2') format('woff2'),
+		url('../font/NanumSquareNeoTTF-bRg.woff') format('woff');
+}
+@font-face {
+	font-family: 'NeoBold';
+	src: url('../font/NanumSquareNeoTTF-cBd.woff2') format('woff2'),
+		url('../font/NanumSquareNeoTTF-cBd.woff') format('woff');
+}
+@font-face {
+	font-family: 'NeoExtraBold';
+	src: url('../font/NanumSquareNeoTTF-dEb.woff2') format('woff2'),
+		url('../font/NanumSquareNeoTTF-dEb.woff') format('woff');
+}
+/*confing*/
+:root{
+	--main-color: #158FC0; /*pruple*/
+	--sub-color-1: #FFFFFF; /*white*/
+	--sub-color-2: linear-gradient(90deg, #158EC3 0%, #16A599 100%); /*linear*/
+	--bg-color: #FAFAFA; /*gray*/
+	--font-color: #3F4857;
+	--border-color: #E8EBEE;
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 1920px;
+	font: 14px 'Neo';
+	background-color: #F1F2F8;
+	color: var(--font-color);
+	letter-spacing: -0.02rem;
+	overflow: hidden;
+	overflow-x: auto;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+div, span{
+	display: inline-block;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+a. a:focus, img{
+	border: 0;
+}
+ol, ul, dl, li{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+button, button:focus, input, input:focus{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	box-shadow: none;
+}
+table, thead, tbody, tr, th, td{
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	word-break: break-all;
+}
+h1{
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	height: 30px;
+	margin-bottom: 30px;
+	font: 2rem 'NeoExtraBold';
+	color: var(--font-color);
+}
+h2{
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	height: 18px;
+	margin-bottom: 15px;
+	font: 1.143rem 'NeoBold';
+	word-break: break-all;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+h2::before{
+	float: left;
+	box-sizing: border-box;
+	content: '';
+	width: 3px;
+	height: 100%;
+	margin-right: 10px;
+	border-left: 3px solid var(--main-color);
+	border-radius: 3px;
+}
+header{
+	float: left;
+	box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+	width: 100%;
+	height: 35px;
+	padding: 0 30px;
+	font: 1.071rem/35px 'NeoBold';
+	background: var(--sub-color-2);
+	color: var(--sub-color-1);
+}
+	header > span{
+		float: left;
+		color: var(--sub-color-1);
+	}
+	header > span:first-child{
+		font-family: 'NeoExtraBold';
+	}
+nav{
+	float: left;
+	box-sizing: border-box;
+	position: fixed;
+	width: 100px;
+	height: calc(100% - 35px);
+	min-height: 500px;
+	margin-top: 35px;
+	background: var(--sub-color-1);
+	border-right: 1px solid var(--border-color);
+}
+	nav > ul{
+		float: left;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	}
+		nav > ul > li{
+			float: left;
+			box-sizing: border-box;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    gap: 10px;
+		    font: 1rem/20px 'NeoBold';
+		    color: #A8B0C7;
+		    text-align: center;
+		}
+		nav > ul > li:nth-of-type(2){
+			margin: 55px 0;
+		}
+			nav > ul > li > span{
+				cursor: pointer;
+			}
+			nav > ul > li > span:nth-of-type(1){
+				float: left;
+				box-sizing: border-box;
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+			}
+			nav > ul > li.on{
+				font: 1rem/20px 'NeoExtraBold';
+				color: var(--main-color);
+			}
+			nav > ul > li:hover{
+				color: rgba(21, 143, 192, 0.5);
+				transition: all 0.3s linear;
+			}
+			nav > ul > li.on:hover{
+				color: rgb(21, 143, 192);
+			}
+/*nav icon*/
+.icon_main{
+	background: url('../images/icon_main.png') center no-repeat rgb(203, 208, 222);
+}
+.icon_statistical{
+	background: url('../images/icon_statistical.png') center no-repeat rgb(203, 208, 222);
+}
+.icon_container{
+	background: url('../images/icon_container.png') center no-repeat rgb(203, 208, 222);
+}
+	nav > ul > li.on > .icon_main{
+	 	background: url('../images/icon_main.png') center no-repeat rgb(21, 143, 192);
+	}
+	nav > ul > li.on > .icon_statistical{
+		background: url('../images/icon_statistical.png') center no-repeat rgb(21, 143, 192);
+	}
+	nav > ul > li.on > .icon_container{
+		background: url('../images/icon_container.png') center no-repeat rgb(21, 143, 192);
+	}
+	nav > ul > li:hover > .icon_main{
+		background: url('../images/icon_main.png') center no-repeat rgba(21, 143, 192, 0.5);
+		transition: all 0.3s linear;
+	}
+	nav > ul > li:hover > .icon_statistical{
+		background: url('../images/icon_statistical.png') center no-repeat rgba(21, 143, 192, 0.5);
+		transition: all 0.3s linear;
+	}
+	nav > ul > li:hover > .icon_container{
+		background: url('../images/icon_container.png') center no-repeat rgba(21, 143, 192, 0.5);
+		transition: all 0.3s linear;
+	}
+	nav > ul > li.on:hover > .icon_main, 
+	nav > ul > li.on:hover > .icon_statistical, 
+	nav > ul > li.on:hover > .icon_container{
+		background-color: rgb(21, 143, 192);
+	}
+	
+.row:hover {
+	background-color: var(--chk-color);
+	cursor: pointer;
+}

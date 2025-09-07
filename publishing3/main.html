@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>스마트 물류 상용화 지원 사업</title>
+	<link rel="stylesheet" type="text/css" href="./conf/css/common.css">
+	<link rel="stylesheet" type="text/css" href="./conf/css/content.css">
+</head>
+<body>
+	<header>
+		<span>스마트 물류 상용화 지원 사업</span>
+		<span>2023-01-01 (일) 15:00:00</span>
+	</header>
+	<nav>
+		<ul>
+			<li class="on"><!-- 클릭 시 class="on" -->
+				<span class="icon_main"></span>
+				<span>메인화면</span>
+			</li>
+			<li>
+				<span class="icon_statistical"></span>
+				<span>통계 정보 <br>분석</span>
+			</li>
+			<li>
+				<span class="icon_container"></span>
+				<span>컨테이너 예측 <br>시물레이션</span>
+			</li>
+		</ul>
+	</nav>
+	<section>
+		<h1>메인화면</h1>
+		<div class="btn_wrap">
+			<div class="search_wrap">
+				<select>
+					<option>항구</option>
+					<option>부두</option>
+					<option>국가</option>
+					<option>지역</option>
+				</select>
+				<input type="text">
+				<div class="btn_period"><!-- 선택 시 span에 class="on" 추가 -->
+					<span>년</span>
+					<span>반기</span>
+					<span>분기</span>
+					<span>월</span>
+				</div>
+				<span class="btn btn_search">조회</span>
+			</div>
+			<div class="function_wrap">
+				<span class="btn btn_delete_sel">선택삭제</span>
+			</div>
+		</div>
+		<div class="upload_wrap">
+			<div class="upload_top">
+				<span>Upload</span>
+			</div>
+			<div class="upload_content">
+				<span></span>
+				<span>여기에 파일을 드래그하거나, 파일을 업로드하세요.</span>
+			</div>
+		</div>
+		<div class="main_tb">
+			<table>
+				<colgroup>
+					<col width="150px">
+					<col width="calc((100% - 150px)/ 7)">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>
+							<div class="check_wrap">
+								<input type="checkbox" id="chk_box" name="chk_box" onclick="chk">
+								<label for="chk_box" class="checkbox"></label>
+							</div>
+						</th>
+						<th>통계 정보 분석</th>
+						<th>연도</th>
+						<th>월</th>
+						<th>항구</th>
+						<th>국가</th>
+						<th>지역</th>
+						<th>삭제</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><!-- loop / total 10 -->
+						<td>
+							<div class="check_wrap">
+								<input type="checkbox" id="chk_box" name="chk_box" onclick="chk">
+								<label for="chk_box" class="checkbox"></label>
+							</div>
+						</td>
+						<td class="tb_center"><span class="btn btn_shortcut">바로가기</span></td>
+						<td>감천항</td>
+						<td>한진해운부두</td>
+						<td>일본</td>
+						<td>오사카</td>
+						<td></td>
+						<td><span class="btn_delete"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<ul class="page">
+			<li class="btn_prev">&#10094;&#10094;</li>
+			<li class="btn_prev">&#10094;</li>
+			<li class="on">1</li>
+			<li class="btn_next">&#10095;</li>
+			<li class="btn_next">&#10095;&#10095;</li>
+		</ul>
+	</section>
+</body>
+</html>

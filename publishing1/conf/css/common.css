@@ -1,0 +1,1528 @@
+@charset "utf-8";
+
+/* font */
+@font-face{
+	font-family: 'Paperlogy';
+	src: url('../font/Paperlogy-4Regular.woff2') format('woff2');
+	src: url('../font/Paperlogy-4Regular.woff') format('woff');
+}
+@font-face{
+	font-family: 'PaperlogyMedium';
+	src: url('../font/Paperlogy-5Medium.woff2') format('woff2');
+	src: url('../font/Paperlogy-5Medium.woff') format('woff');
+}
+@font-face{
+	font-family: 'PaperlogySemiBold';
+	src: url('../font/Paperlogy-6SemiBold.woff2') format('woff2');
+	src: url('../font/Paperlogy-6SemiBold.woff') format('woff');
+}
+@font-face{
+	font-family: 'PaperlogyBold';
+	src: url('../font/Paperlogy-7Bold.woff2') format('woff2');
+	src: url('../font/Paperlogy-7Bold.woff') format('woff');
+}
+@font-face{
+	font-family: 'PaperlogyExtraBold';
+	src: url('../font/Paperlogy-8ExtraBold.woff2') format('woff2');
+	src: url('../font/Paperlogy-8ExtraBold.woff') format('woff');
+}
+
+/* root */
+:root{
+	--main-color: #336AEF; /*메인 파란색*/
+	--sub-color-1: #FFFFFF; /*흰색*/
+	--sub-color-2: #1D47AD; /*찐 파랑 */
+	--point1: #8CC1FF;
+	--point2: #90ADF2;
+	--point3: #336AEF;
+	--point4: #1D47AD;
+	--point5: #3D4561;
+	--bg-color-1: #F0F3FB; /*연파랑*/
+	--bg-color-2: #F8FAFF; /*연회색*/
+	--gray-color-1: #D9DFE8; /*연회색*/
+	--gray-color-2: #BFC3D2; /*중간 회색*/
+	--gray-color-3: #767B83; /*진회색*/
+	--gray-color-4: #A2A8B0;/*input 회색*/
+	--blue-border: #90ADF2;
+	--font-color: #3D4561;
+	--footer-bg: #272B39;
+	--footer-font: #959AAA;
+	--gradient:linear-gradient(180deg, #94B0F2 0%, #336AEF 100%);
+	--shadow: 3px 4px 4px 0px rgba(51, 106, 239, 0.15);
+	--red-color: #FF6161;
+}
+/* reset */
+html, body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+  	overflow: initial;
+	font: 18px 'Paperlogy';
+ 	text-wrap: pretty
+
+}
+*, :after, :before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+div, span{
+	display: inline-block;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+a, a:focus, img{
+	border: 0;
+}
+textarea{
+	backface-visibility: hidden;
+	border: 0;
+	word-break: keep-all;
+	word-wrap: break-word;
+}
+ul, li, ol, dd, dl{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+button, button:focus, input, input:focus{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	box-shadow: none;
+}
+table, thead, tbody, tr, th, td{
+	table-layout: fixed;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	word-break: break-all;
+}
+form, input, select, textarea, h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+	padding: 0;
+}
+
+/*margin*/
+.mb10{
+	margin-bottom: 10px !important;
+}
+.mb15{
+	margin-bottom: 15px !important;
+}
+.mb20{
+	margin-bottom: 20px !important;
+}
+.mb25{
+	margin-bottom: 25px !important;
+}
+.mb30{
+	margin-bottom: 30px !important;
+}
+.mb40{
+	margin-bottom: 40px !important;
+}
+.mb50{
+	margin-bottom: 50px !important;
+}
+.mb80{
+	margin-bottom: 80px !important;
+}
+.mb100{
+	margin-bottom: 100px !important;
+}
+.mt10{
+	margin-top: 10px !important;
+}
+.mt20{
+	margin-top: 20px !important;
+}
+.mt30{
+	margin-top: 30px !important;
+}
+.mt40{
+	margin-top: 40px !important;
+}
+.mt50{
+	margin-top: 50px !important;
+}
+.mt80{
+	margin-top: 80px !important;
+}
+.mt100{
+	margin-top: 100px !important;
+}
+.ml20{
+	margin-left: 20px !important;
+}
+/*padding*/
+.pt100{
+	padding-top: 100px;
+}
+.pb100{
+	padding-bottom: 100px;
+}
+
+h2{
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	font: 1rem 'PaperlogySemiBold';
+	color: #0063F2;
+	text-align: center;
+}
+.main_con2 h2, .main_con3 h2, .main_con4 h2{
+	text-align: left;
+}
+h3{
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	padding-left: 30px;
+	font: 2.556rem 'PaperlogyExtraBold';
+
+}
+h3::before{
+	content: '';
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	float: left;
+	width: 17px;
+	height: 35px;
+	transform: rotate(30deg);
+	flex-shrink: 0;
+	border-radius: 50px;
+	background: linear-gradient(180deg, #94B0F2 0%, #336AEF 100%);
+}
+h4{
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	font: 1rem 'PaperlogyBold';
+	color: var(--main-color);
+	text-align: center;
+}
+h5{
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	font: 2.5rem 'PaperlogySemiBold';
+	color: #1D1D1D;
+	text-align: center;
+}
+/* common */
+body{
+	position: relative;
+	min-width: 1400px;
+	height: 100vh;
+	background-color: #FBFCFF;
+	color: var(--font-color);
+	letter-spacing: -0.02rem;
+	overflow-x: hidden;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    top: 100px;
+    left: 0;
+}
+/*nav*/
+	header{
+		display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    position: sticky;
+	    top: 0;
+	    left: 0;
+		width: 100%;
+		height: 100px;
+		background: #0D1639;
+    	border-bottom: 1px solid var(--font-color);
+    	z-index: 99;
+	}
+	.ci_logo a{
+		float: left;
+	    width: 171px;
+	    height: 42px;
+		background: url('../images/ci_logo.svg') center no-repeat;
+	}
+	nav{
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    z-index: 99;
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		height: 100px;
+	}
+		nav > ul{
+			display: flex;
+			z-index: 99;
+			height: 100%;
+			line-height: 100px;
+		}
+		.nav_bg{
+			display: none;
+			float: left;
+			width: 100%;
+			height: fit-content;
+			position: absolute;
+			top: 100px;
+			height: 200px;
+			left: 0;
+			background: #0D1639;
+			z-index: -1;
+		}
+			nav > ul > li{
+				position: relative;
+				width: 220px;
+				text-align: center;
+				cursor: pointer;
+			}
+			nav > ul > li.on a{
+				color: var(--main-color);
+				font-family: 'PaperlogyExtraBold';
+			}
+				nav > ul > li a{
+					color: var(--sub-color-1);
+					font: 1.167rem 'PaperlogySemiBold';
+				}
+				nav > ul > li a:hover{
+					color: var(--main-color);
+					transition: 0.35s linear;
+				}
+			nav .sub{
+			    position: absolute;
+			    left: 0;
+			    top: 112px;
+			    line-height: 25px;
+			    display: none;
+			    width: inherit;
+			    gap: 30px;
+				z-index: 99;
+			}
+			nav .sub li{
+				width: 100%;
+				padding: 15px 0;
+				cursor: pointer;
+			}
+			nav .sub li a{
+				display: block;
+				font: 0.944rem 'PaperlogyMedium';
+				z-index: 99;
+			}
+			nav .sub li a:hover{
+				color: var(--main-color);
+				font: 0.944rem 'PaperlogyMedium';
+			}
+			nav .sub li.nav_sf a{
+				font-size: 0.889rem;
+			}
+			nav .sub li.nav_sf a:hover{
+				font-size: 0.889rem;
+			}
+.btn:hover{
+	opacity: 0.9;
+	transition: 0.35s linear;
+}			
+/*퀵 버튼*/
+.btn_quick{
+	float: left;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    box-shadow: 1px 1px 5px rgba(51, 106, 239, .4);
+    border-radius: 100%;
+	display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    bottom: 50px;
+    right: 50px;
+    background: url('../images/btn_quick.svg') center no-repeat;
+    opacity: 0.85;
+    cursor: pointer;
+}
+/*푸터*/
+footer{
+	display: flex;
+    justify-content: center;
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	height: 253px;
+	padding: 50px 0;
+	background: var(--footer-bg);
+	color: var(--footer-font);
+	font: 0.889rem 'Paperlogy';
+}
+	footer .inner > *{
+		float: left;
+		box-sizing: border-box;
+		width: 100%;
+	}
+	.footer_logo{
+		height: 42px;
+		background: url('../images/footer_logo.svg') no-repeat;
+	}
+
+/*모바일 메뉴*/	
+.btn_toggle {
+	display: none;
+	cursor: pointer;
+	position: relative;
+	float: right;
+	width: 55px;
+	height: 70px;
+}
+	.btn_toggle span{
+		position:absolute;
+		left: 5px;
+		display: inline-block;
+		width: 35px;
+		height: 5px;
+		background-color: var(--main-color);
+		border-radius: 5px;
+		transform-origin: center;
+		transition: opacity 0.1s linear, all 0.35s linear;
+	}
+	.btn_toggle span:nth-of-type(1){
+		top: 20px;
+	}
+	.btn_toggle span:nth-of-type(2){
+		top: 35px;
+	}
+	.btn_toggle span:nth-of-type(3){
+		top: 50px;
+	}
+	.menu_on .btn_toggle span:nth-of-type(1){
+		transform: rotate(45deg);
+		top: 35px;
+	}
+	.menu_on .btn_toggle span:nth-of-type(2){
+		opacity:0;
+	}
+	.menu_on .btn_toggle span:nth-of-type(3){
+		transform: rotate(-45deg);
+		top: 35px;
+	}
+/**top(main meun):mobile**/
+.btn_toggle {
+	display: none;
+	cursor: pointer;
+	position: relative;
+	float: right;
+	width: 55px;
+	height: 70px;
+}
+	.btn_toggle span{
+		position:absolute;
+		left: 5px;
+		display: inline-block;
+		width: 35px;
+		height: 5px;
+		background-color: var(--main-color);
+		border-radius: 5px;
+		transform-origin: center;
+		transition: opacity 0.1s linear, all 0.35s linear;
+	}
+	.btn_toggle span:nth-of-type(1){
+		top: 20px;
+	}
+	.btn_toggle span:nth-of-type(2){
+		top: 35px;
+	}
+	.btn_toggle span:nth-of-type(3){
+		top: 50px;
+	}
+	.menu_on .btn_toggle span:nth-of-type(1){
+		transform: rotate(45deg);
+		top: 35px;
+	}
+	.menu_on .btn_toggle span:nth-of-type(2){
+		opacity:0;
+	}
+	.menu_on .btn_toggle span:nth-of-type(3){
+		transform: rotate(-45deg);
+		top: 35px;
+	}
+.m_nav {
+	/*display: none;*/
+	box-sizing: border-box;
+	position: fixed;
+	top: 70px;
+	right: -100%;
+	float: right;
+	width: 100%;
+	height: 100%;
+	padding: 50px 15px;
+	background: #0D1639 url('../images/mnav_background.png') no-repeat;
+    background-position: 90% 86%;
+	overflow-y: auto;
+	transition: right 1.2s ease;
+	z-index: 999;
+}
+	.menu_on .m_nav {
+		/*display: block;*/
+		right: 0;
+		transition: right 1.2s ease;
+	}
+.m_mm_wrap {
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+}
+.m_mm_wrap > li {
+	cursor: pointer;
+	box-sizing: border-box;
+	float: left;
+	position: relative;
+	padding: 0 20px;
+	width: 100%;
+	border-bottom: 1px solid var(--line-color);
+	text-align: left;
+}
+.m_mm_wrap > .m_mm {
+	margin: 50px 0 20px 0;
+	color: #FFF;
+	font: 1rem 'PaperlogySemiBold';
+}
+.m_mm_wrap > .m_mm:first-child{
+	margin-top: 0;
+}
+.m_sm {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+	font: 0.889rem 'Paperlogy';
+	color: #DDD;
+}
+	.m_sm:last-child{
+		margin-bottom: 0;
+	}
+.m_mm_wrap > .m_mm.on{
+    color: var(--main-color);
+    font-family: 'PaperlogyBold';
+}
+	.m_mm_wrap > li.on{
+	    color: var(--blue-border);
+	    font-family: 'PaperlogySemiBold';
+	}
+
+
+/*content css*/
+
+@charset "utf-8";
+
+/*main*/
+.main_con1{
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  height: 1000px;
+  background: url('../images/img_main.png') no-repeat center / cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+  .main_txt{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--sub-color-1);
+  }
+    .main_txt > *{
+      width: 100%;
+      text-align: center;
+    }
+    .main_txt > span{
+      font: 4rem 'PaperlogyBold';
+    }
+    .main_txt > div{
+      font: 1.556rem 'Paperlogy';
+    }
+      .main_txt div span{
+        font-family: 'PaperlogySemiBold';
+      }
+/*scroll css*/      
+.arrow_down {
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: absolute;
+  inset: auto 0% 0%;
+  overflow: hidden;
+}
+
+.text_scroll_down {
+  letter-spacing: 0.5rem;
+  font-size: 12px; 
+  color: #fff;
+  margin-bottom: 8px;
+  animation: fadeIn 2s infinite;
+  text-align: center;
+  padding-left: 14px;
+}
+
+.scroll_down_wrap {
+  width: 1px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  position: relative;
+  z-index: -1;
+}
+
+.scroll_down {
+  width: 2px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scrollDown 2s infinite;
+  z-index: 99;
+  overflow: hidden;
+}
+.inner{
+    float: left;
+    box-sizing: border-box;
+    width: 1400px;
+}
+/*main_con2*/
+.main_con2, .main_con3, .main_con4, .main_con5{ 
+  float: left;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.main_con2{
+  padding: 150px 0;
+  background: var(--bg-color-2);
+}
+.main_con2::before{
+  content: '';
+  position: absolute;
+  width: 217px;
+  height: 217px;
+  background: url('../images/deco_dna.png') center no-repeat;
+  top: -5%;
+  left: 5%;
+}
+  .main_con2 .inner{
+    display: flex;
+    justify-content: space-between;
+    height: 471px;
+  }
+  .main_con2 .inner > div{
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .inner p{
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 26px;
+  }
+
+  .btn_viewmore{
+    float: left;
+    box-sizing: border-box;
+    font: 1rem/59px 'PaperlogySemiBold';
+    cursor: pointer;
+  }
+  .btn_viewmore::before{
+    content: '';
+    float: right;
+    box-sizing: border-box;
+    width: 49px;
+    height: 59px;
+    margin: 0 0 5px 5px;
+    background: url('../images/btn_viewmore.svg') center no-repeat;
+  }
+  .btn_viewmore:hover{
+    color: var(--main-color);
+    transition: 0.35s linear;
+  }
+    .main_con2 .left .bottom{
+      display: flex;
+      gap: 27px;
+    }
+      .main_con2 .left .bottom li{
+        width: calc((100% / 3) - 27px);
+        cursor: pointer;
+      }
+    .main_con2 .left .bottom .tit{
+      position: relative;
+      width: 100%;
+      margin-bottom: 14px;
+      border-bottom: 1px solid #BBBBBB;
+      color: var(--gray-color-4);
+      font: 1.222rem/58px 'PaperlogySemiBold';
+    }
+    .main_con2 .left .bottom .con{
+      color: var(--gray-color-4);
+      line-height: 27px;
+    }
+    .main_con2 .left .bottom li.on .tit{
+      color: var(--font-color);
+    }
+    .main_con2 .left .bottom li.on .con{
+      color: var(--gray-color-3);
+      line-height: 27px;
+    }
+    .main_con2 .left .bottom li.on .tit::before{
+      content: '';
+      float: left;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: var(--main-color);
+    }
+    .main_con2 .left .bottom li:hover .tit{
+      color: var(--font-color);
+      transition: 0.35s linear;
+    }
+    .main_con2 .left .bottom li:hover .con{
+      color: var(--gray-color-3);
+      transition: 0.35s linear;
+    }
+  .main_con2 .right div{
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    height: 471px;
+    display: none;
+    border-radius: 8px 8px 8px 80px;
+  }
+  .main_con2 .right div:nth-of-type(1){
+    background: url('../images/img_main_aihealth1.png') center no-repeat;
+  }
+  .main_con2 .right div:nth-of-type(2){
+    background: url('../images/img_main_aihealth2.png') center no-repeat;
+  }
+  .main_con2 .right div:nth-of-type(3){
+    background: url('../images/img_main_aihealth3.png') center no-repeat;
+  }
+/*main_con3*/
+.main_con3{
+  position: relative;
+  padding-bottom: 200px;
+  background: #fff;
+}
+.main_con3::before{
+  content: '';
+  background: #FFF url('../images/main_3_bg.png') center / cover no-repeat;
+  float: left;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 938px;
+  z-index: -10;
+  opacity: 0.7;
+}
+  .online_tec_tab{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    padding: 120px 0;
+    justify-content: space-between;
+    font: 1.111rem 'PaperlogyMedium';
+    color: var(--gray-color-3);
+  }
+    .online_tec_tab li{
+      padding-bottom: 15px;
+      border-bottom: 1px solid #C9C9C9;
+      cursor: pointer;
+    }
+    .online_tec_tab li.on{
+      font-family: 'PaperlogySemiBold';
+      border-bottom: 2px solid var(--main-color);
+      color: var(--main-color);
+      width: 440px;
+    }
+    .online_tec_tab li:hover{
+      font-family: 'PaperlogySemiBold';
+      color: var(--main-color);
+      transition: linear 0.35s;
+    }
+  .main_con3 .bottom{
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 456px;
+  }
+  .online_tec_img{
+    float: left;
+    box-sizing: border-box;
+    width: 524px;
+    height: 457px;
+    margin: 0 40px 0 50px;
+  }
+  .online_tec_img span{
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .online_tec_img span:first-child{
+    background: url('../images/online_tec_img1.png') center no-repeat;
+  }
+  .online_tec_img span:nth-of-type(2){
+    background: url('../images/online_tec_img2.png') center no-repeat;
+  }
+  .online_tec_img span:nth-of-type(3){
+    background: url('../images/online_tec_img3.png') center no-repeat;
+  }
+  .online_tec_con{
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    width: calc(75% - 614px)
+  }
+    .online_tec_con > *{
+      float: left;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .online_tec_con .tit{
+      font: 2.222rem 'PaperlogySemiBold';
+    }
+    .online_tec_con2, .online_tec_con3 .tit{
+      font-size: 1.667rem;
+    }
+    .online_tec_con .con{
+      font: 1rem/28px 'Paperlogy';
+    }
+    .online_tec_con .btn_viewmore{
+      width: initial;
+    }
+  .online_tec_con{
+    display: none;
+  }
+  .online_tec_con1::before{
+    content: '01';
+    font: 4.833rem 'PaperlogyExtraBold';
+    color: #F3F6FE;
+    position: absolute;
+    top: -100px;
+    right: 0;
+  }
+  .online_tec_con2::before{
+    content: '02';
+    font: 4.833rem 'PaperlogyExtraBold';
+    color: #F3F6FE;
+    position: absolute;
+    top: -100px;
+    right: 0;
+  }
+  .online_tec_con3::before{
+    content: '03';
+    font: 4.833rem 'PaperlogyExtraBold';
+    color: #F3F6FE;
+    position: absolute;
+    top: -100px;
+    right: 0;
+  }
+/*main_con4*/
+.main_con4{
+  height: 914px;
+  background: url('../images/main_con4_bg.png') center no-repeat;
+}
+  .main_con4 .inner > .top, 
+  .main_con4 .inner > .top h2{
+    color: var(--sub-color-1);
+  }
+  .main_con4 > .inner > .top h3::before{
+    display: none;
+  }
+  .main_con4 > .inner > .top h3{
+    padding: 0;
+  }
+  .main_con4 .inner{
+    position: relative;
+  }
+    .main_con4 .inner > .top p{
+      position: absolute;
+      width: initial;
+      top: 52px;
+      right: 0;
+    }
+    .main_con4 .inner .bottom{
+      float: left;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 29px 36px;
+      background: var(--sub-color-1);
+      border-radius: 15px;
+    }
+    .main_con4 .bottom > *{
+      float: left;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      width: 50%;
+      height: 471px;
+    }
+      .main_con4 .bottom .right{
+        background: url('../images/main_con4_right.png') center no-repeat;
+        image-rendering: pixelated;
+        border-radius: 15px;
+      }
+    .main_con4 .bottom h3{
+      font: 2.222rem 'PaperlogySemiBold';
+    }
+.main_con5{
+  background: var(--sub-color-1);
+  padding-bottom: 200px;
+}
+  .main_con5 .con_wrap{
+    float: left;
+    box-sizing: border-box;
+    width: 100%;
+    height: 472px;
+    display: flex;
+    gap: 30px;
+  }
+  .main_con5 h2{
+    text-align: left;
+  }
+  .main_con5 .left{
+    float: left;
+    box-sizing: border-box;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main_con5 .right{
+    float: left;
+    box-sizing: border-box;
+    width: calc(60% - 30px);
+    width: 1061px;
+    overflow: hidden;
+  }
+  .main_con5 h3{
+    font: 2.222rem 'PaperlogySemiBold';
+    padding: 0;
+  }
+  .main_con5 h3::before{
+    display: none;
+  }
+  .main_con5 .main_news_btn{
+    display: flex;
+    gap: 15px;
+  }
+    .main_con5 .main_news_btn > span{
+      float: left;    
+      box-sizing: border-box;
+      width: 50px;
+      height: 50px;
+      border-radius: 100px;
+      border: 1px solid var(--gray-color-4); 
+      color: var(--gray-color-3);
+      cursor: pointer;
+    }
+    .main_con5 .main_news_btn .prev{
+      background: url('../images/btn_main_prev.svg') center no-repeat;
+    }
+    .main_con5 .main_news_btn .next{
+      background: url('../images/btn_main_next.svg') center no-repeat;
+    }
+    .main_con5 .main_news_btn .prev:hover{
+      background: url('../images/btn_main_prev.svg') center no-repeat;
+      transition: linear 0.35s;
+    }
+    .main_con5 .main_news_btn .next:hover{
+      background: url('../images/btn_main_next.svg') center no-repeat;
+      transition: linear 0.35s;
+    }
+    .main_con5 .main_news_btn > span:hover{
+      border: 1px solid var(--font-color);
+      transition: linear 0.35s;
+    }
+  .slide_wrap{
+    float: left;    
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+    .slide_wrap li{
+      float: left;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 408px;
+      height: 100%;
+      padding: 35px;
+      background: #F3F3F3;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+      .slide_wrap li .notice{
+        padding: 5px 10px;
+        border-radius: 14px;
+        background: #5C88F2;
+        color: var(--sub-color-1);
+        font: 1rem 'PaperlogySemiBold';
+      }
+      .slide_wrap li .tit{
+        float: left;
+        box-sizing: border-box;
+        width: 100%;
+        font: 1.444rem 'PaperlogySemiBold'; 
+        word-break: auto-phrase;
+      }
+      .slide_wrap li .con{
+        float: left;
+        box-sizing: border-box;
+        width: 100%;
+        font: 1rem/27px 'Paperlogy';
+        color: var(--gray-color-3);
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+      }
+      .slide_wrap li .date{
+        float: left;
+        box-sizing: border-box;
+        font: 1rem 'PaperlogyBold';
+        color: var(--gray-color-3);
+      }
+      .slide_wrap .btn_slide_go{
+        float: left;
+        box-sizing: border-box;
+        font: 1rem 'PaperlogySemiBold';
+        color: var(--main-color);
+      }
+    .slide_wrap li:hover, 
+    .slide_wrap li.on{
+      background: #2B53B4;
+      color: var(--sub-color-1);
+      transition: 0.35s linear;
+    }
+    .slide_wrap li:hover .notice, 
+    .slide_wrap li.on .notice{
+      background: #EDF2FF;
+      color: var(--main-color);
+      transition: 0.35s linear;
+    }
+    .slide_wrap li:hover .con, 
+    .slide_wrap li:hover .date, 
+    .slide_wrap li:hover .btn_slide_go,   
+    .slide_wrap li.on .con, 
+    .slide_wrap li.on .date, 
+    .slide_wrap li.on .btn_slide_go{
+      color: var(--sub-color-1);
+      transition: 0.35s linear;
+    }
+
+/* 부모 컨테이너 */
+.swiper-container-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100vw; /* 화면 너비에 맞춤 */
+  max-width: 1920px; /* 최대 너비 설정 (옵션) */
+  margin: 0 auto;
+}
+
+/* 슬라이드 컨테이너 */
+.swiper-container {
+  position: relative;
+  width: 100%;
+}
+
+/* 슬라이드 */
+.swiper-slide {
+  width: calc(25% - 20px); /* 4개의 슬라이드가 한 줄에 나타나도록 설정 */
+  min-width: 408px; /* 최소 너비 */
+  overflow: hidden;
+}
+
+/*메인화면 나타나는 css 추가*/
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*스크롤 프레임*/
+
+@keyframes scrollDown {
+  0% {
+    transform: translate(-50%, 5px);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, 20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, 35px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+/*mobile css*/
+@media (max-width:1200px) {
+
+  html,
+  body {
+    font: 16px 'Paperlogy';
+
+  }
+
+  body {
+    min-width: initial;
+  }
+
+  nav {
+    width: 90%;
+  }
+
+  nav>ul,
+  nav>.nav_bg {
+    display: none;
+  }
+
+  header {
+    height: 70px;
+    padding: 0 30px;
+    background: #0D1639 !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  header .header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ci_logo a {
+    width: 150px;
+    background: url(../images/ci_logo_m.svg) center no-repeat;
+  }
+
+  .btn_toggle {
+    width: 45px;
+    height: 50px;
+  }
+
+  .btn_toggle span {
+    height: 3px;
+  }
+
+  .btn_toggle span:nth-of-type(1) {
+    top: 12px;
+  }
+
+  .btn_toggle span:nth-of-type(2) {
+    top: 24px;
+  }
+
+  .btn_toggle span:nth-of-type(3) {
+    top: 36px;
+  }
+
+  .menu_on .btn_toggle span:nth-of-type(1) {
+    top: 25px;
+  }
+
+  .menu_on .btn_toggle span:nth-of-type(3) {
+    top: 25px;
+  }
+
+  .inner {
+    width: 100%;
+  }
+
+  .wrap {
+    top: 70px;
+  }
+
+  footer {
+    min-height: 253px;
+    height: initial;
+    padding: 30px;
+  }
+
+  footer .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer_logo {
+    background: url('../images/footer_logo.svg') center no-repeat;
+  }
+
+  .btn_toggle {
+    display: block;
+  }
+
+  br {
+    display: none;
+  }
+
+  /*메인*/
+  .main_con2,
+  .main_con3,
+  .main_con4,
+  .main_con5 {
+    padding: 50px 20px;
+  }
+
+  .main_con2 .inner,
+  .main_con3 .inner,
+  .main_con4 .inner,
+  .main_con5 .inner {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .main_con2 .inner>div {
+    width: 100%;
+  }
+
+  .main_con2 .left .bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main_con2 .left .bottom li {
+    width: 100%;
+  }
+
+  .main_con2 .right div:nth-of-type(1) {
+    height: 385px;
+    background: url('../images/img_main_aihealth1_m.png') no-repeat center /cover;
+  }
+
+  .main_con2 .right div:nth-of-type(2) {
+    height: 385px;
+    background: url('../images/img_main_aihealth2_m.png') no-repeat center /cover;
+  }
+
+  .main_con2 .right div:nth-of-type(3) {
+    height: 385px;
+    background: url('../images/img_main_aihealth3_m.png') no-repeat center /cover;
+  }
+
+  .main_con3 .bottom {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .main_txt{
+    padding: 20px;
+  }
+  .online_tec_tab {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 0 80px 0;
+  }
+
+  .online_tec_tab li {
+    width: calc(100% / 3);
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .online_tec_tab li.on {
+    width: calc(100% / 3);
+  }
+
+  .online_tec_img {
+    width: 100%;
+  }
+
+s  .online_tec_con {
+    width: 100%;
+  }
+
+  .online_tec_con1, 
+  .online_tec_con2, 
+  .online_tec_con3{
+    padding-top: 60px;
+  }
+  .online_tec_con1{
+    width: 100%;
+  }
+  .main_con4 {
+    height: fit-content;
+    background: url('../images/main_con4_bg.png') center;
+  }
+
+  .main_con4 .inner>.top p {
+    position: initial;
+  }
+
+  .main_con4 .bottom>* {
+    width: 100%;
+    height: initial;
+  }
+
+  .main_con4 .bottom .left .top {
+    width: 100%;
+  }
+
+  .main_con4 .bottom .right {
+    min-height: 472px;
+    background: url('../images/main_con4_right_m.png') center no-repeat;
+    image-rendering: initial;
+  }
+
+  .main_con5 .con_wrap {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .main_con5 .right {
+    width: 100%;
+  }
+
+  .slide_wrap li {
+    min-height: 472px;
+  }
+
+  .main_con5 .left {
+    width: 100%;
+  }
+
+  .main_con5 .main_news_btn {
+    justify-content: flex-end;
+  }
+
+
+
+}
+
+
+@media (max-width:768px) {
+
+  header {
+    background: #0D1639 !important;
+  }
+
+  .main_txt>span {
+    font: 3rem 'PaperlogyBold';
+  }
+
+  .main_txt>div {
+    font: 1.25rem 'Paperlogy';
+  }
+
+  .support_wrap {
+    flex-direction: column;
+  }
+
+  .support_wrap>div {
+    width: 100%;
+    min-height: initial;
+  }
+
+  .support_how ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .support_how .how_arrow {
+    background: url('../images/how_arrow_down.svg') center no-repeat;
+  }
+
+  .support_who {
+    flex-direction: column;
+  }
+
+  .support_who>div {
+    width: 100%;
+  }
+
+  .main_con3::before {
+    opacity: 0.2;
+  }
+
+
+}
+
+
+
+
+@media (max-width:440px) {
+
+  h3 {
+    font: 1.875rem 'PaperlogyExtraBold';
+  }
+
+  h3::before {
+    top: 1px;
+    float: left;
+    width: 15px;
+    height: 28px;
+  }
+
+  h2 {
+    font: 0.938rem 'PaperlogySemiBold';
+  }
+
+  .online_tec_con .tit {
+    font: 1.875rem 'PaperlogySemiBold';
+  }
+
+  .online_tec_tab li {
+    font: 0.938rem/22px 'Paperlogy';
+  }
+
+  .slide_wrap {
+    gap: 15px;
+  }
+
+  .support_wrap>div .tit {
+    font-size: 1.125rem;
+  }
+
+  .support_who .left .tit {
+    font-size: 1.125rem;
+  }
+
+  .main_con2 .right div:nth-of-type(1) {
+    height: 258px;
+    background: url(../images/img_main_aihealth1_mm.png) no-repeat center / cover;
+  }
+
+  .main_con2 .right div:nth-of-type(2) {
+    height: 258px;
+    background: url(../images/img_main_aihealth2_mm.png) no-repeat center / cover;
+  }
+
+  .main_con2 .right div:nth-of-type(3) {
+    height: 258px;
+    background: url(../images/img_main_aihealth3_mm.png) no-repeat center / cover;
+  }
+
+  .main_con4 .bottom .right {
+    background: url(../images/main_con4_right_mm.png) center no-repeat;
+    height: 266px;
+    min-height: initial;
+  }
+
+  .online_tec_img span:first-child {
+    max-height: 315px;
+    background: url('../images/online_tec_img1_m.png') center no-repeat;
+  }
+
+  .online_tec_img span:nth-of-type(2) {
+    max-height: 315px;
+    background: url('../images/online_tec_img2_m.png') center no-repeat;
+  }
+
+  .online_tec_img span:nth-of-type(3) {
+    max-height: 315px;
+    background: url('../images/online_tec_img3_m.png') center no-repeat;
+  }
+
+  h5 {
+    font: 1.875rem 'PaperlogySemiBold';
+  }
+
+  .sub_banner h2 {
+    font-size: 1.75rem;
+    color: #fff;
+    text-wrap: pretty;
+  }
+
+  .sub_tit::before {
+    left: 17px;
+    width: 13px;
+    height: 22px;
+  }
+
+  .short_sub_tit {
+    padding: 0;
+  }
+
+  .short_sub_tit::before {
+    left: -20px;
+  }
+
+  .login_con .tit h1 {
+    font-size: 1.875rem !important;
+  }
+  .login_input input {
+    padding: 0 20px 0 120px !important;
+  }
+  .login_pw, .pw_new, .pw_new_check {
+    padding: 0 26px 0 20px !important;
+  }
+}

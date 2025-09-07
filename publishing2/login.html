@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테크로스 BWMS</title>
+  <link rel="stylesheet" type="text/css" href="./conf/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./conf/css/common.css">
+  <link rel="stylesheet" type="text/css" href="./conf/css/content.css">
+  <link rel="stylesheet" type="text/css" href="./conf/css/login.css">
+</head>
+<body>
+<section class="login_bg">
+		<form name="loginForm" class="loginForm" action="/bwmsAI/login.do" method="post">
+			<div class="login_wrap">
+			<div class="left">
+				<div class="login_logo"></div>
+				<input type="text" name="id" placeholder="id" autocomplete="off" value="">
+				<input type="password" name="pw" placeholder="password" autocomplete="current-password">
+				<span class="login_warning" style="display: none;">Invalid username or password.</span><!-- 로그인 정보 틀릴 시 .login_warning {display:block;}-->
+				<div class="login_auto">
+					<div class="auto_check_wrap">
+						<input type="checkbox" id="auto_login" name="autoLogin" value="1">
+		          		<label for="auto_login" class="auto_check"></label>
+					</div>
+					<label for="auto_login" class="auto_txt">Stay Logged In</label>
+				</div>
+				<span class="btn_login">
+					<a href="add&edit.html" class="btn_login">Login</a>
+				</span>
+			</div>
+			<div class="right"></div>
+			</div>
+		</form>
+	</section>
+</body>
+</html>

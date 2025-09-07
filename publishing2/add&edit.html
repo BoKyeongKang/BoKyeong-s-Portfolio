@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테크로스 BWMS</title>
+  <link rel="stylesheet" type="text/css" href="./conf/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./conf/css/common.css">
+  <link rel="stylesheet" type="text/css" href="./conf/css/content.css">
+</head>
+
+<body>
+  <div class="body_wrap">
+    <!-- gnb 시작 -->
+    <div class="gnb">
+      <ul>
+        <li class="logo"></li>
+        <li class="bwms"></li>
+      </ul>
+      <ul>
+        <li>관리자님 반갑습니다!</li>
+        <li class="lang_ko"></li><!-- 한글 페이지 class="lang_ko"--><!-- 영문 페이지 class="lang_en"-->
+      </ul>
+    </div>
+    <!-- gnb 끝 -->
+    <!-- section 시작 -->
+    <section>
+      <div class="tit_wrap">
+        <h2>ADD VESSEL</h2>
+      </div>
+      <table class="list list_horizon">
+        <colgroup>
+          <col width="12%">
+          <col width="38%">
+          <col width="12%">
+          <col width="38%">
+        </colgroup>
+        <tbody>
+          <!-- text/ -->
+          <tr>
+            <th>선박명<span class="imptnt">*</span></th>
+            <td><input type="text" name="shipname" placeholder="Enter ship name"></td>
+            <th>HULL NO</th>
+            <td><input type="text" name="hullno" placeholder="Enter hull no"></td>
+          </tr>
+          <!-- text 2개/ -->
+          <tr>
+            <th>YARD NAT</th>
+            <td class="half_input">
+              <input type="text" name="shipname" placeholder="Enter hull no">
+              <input type="text" name="shipname" placeholder="Enter hull no">
+            </td>
+            <th>YARD NAT</th>
+            <td class="member_mail half_input">
+              <input type="text" name="shipname" placeholder="Enter hull no">
+              <span>@</span>
+              <input type="text" name="shipname" placeholder="Enter hull no">
+            </td>
+          </tr>
+          
+          <!-- select/ -->
+          <tr>
+            <th>VESSEL<span class="imptnt">*</span></th>
+            <td>
+              <select name="vessel" required="">
+                <option value="" disabled="" selected="">Select vessel type</option>
+                <option value="BARGE">BARGE</option>
+                <option value="BULKER">BULKER</option>
+                <option value="CONTAINER SHIP">CONTAINER SHIP</option>
+                <option value="DRILLSHIP">DRILLSHIP</option>
+                <option value="GENERAL CARGO">GENERAL CARGO</option>
+                <option value="HEAVY LIFT VESSEL">HEAVY LIFT VESSEL</option>
+                <option value="LIQUID GAS CARRIER">LIQUID GAS CARRIER</option>
+                <option value="LNG CARRIER">LNG CARRIER</option>
+                <option value="LPG CARRIER">LPG CARRIER</option>
+                <option value="OFF SHORE_ETC">OFF SHORE_ETC</option>
+                <option value="OIL TANKER">OIL TANKER</option>
+                <option value="PASSENGER SHIP">PASSENGER SHIP</option>
+                <option value="PCTC">PCTC</option>
+                <option value="PUBLIC VESSEL">PUBLIC VESSEL</option>
+                <option value="SUPPLY VESSEL">SUPPLY VESSEL</option>
+              </select>
+            </td>
+            <th>CLIENT NAME</th>
+            <td><input type="text" name="clientname" placeholder="Select member"></td>
+          </tr>
+          <!-- radio/ -->
+          <tr>
+            <th>FOC</th>
+            <td class="radio">
+              <input type="radio" name="ecsEx2" value="Y" id="ex2Radio1">
+              <label for="ex2Radio1">Y</label>
+              <input type="radio" name="ecsEx2" value="N" id="ex2Radio2" checked="">
+              <label for="ex2Radio2">N</label>
+            </td>
+            <th>FOC</th>
+            <td class="radio">
+              <input type="radio" name="ecsEx2" value="Y" id="ex2Radio1">
+              <label for="ex2Radio1">Y</label>
+              <input type="radio" name="ecsEx2" value="N" id="ex2Radio2" checked="">
+              <label for="ex2Radio2">N</label>
+            </td>
+          </tr>
+          <!-- date/ -->
+          <tr>
+            <th>CLASS<span class="imptnt">*</span></th>
+            <td><input type="text" name="shipname" placeholder="Enter ship name"></td>
+            <th>SERIES</th>
+            <td><input type="date"></td>
+          </tr>
+          <!-- checkbox/ -->
+          <tr>
+            <th>Service Type<span class="imptnt">*</span></th>
+            <td class="chk_list">
+							<ul>
+								<li class="chk_wrap">
+									<input type="checkbox" name="managerType" value="as" id="chk1">
+									<label for="chk1" class="chkbox"></label>
+								</li>
+								<li><label for="chk1">AS</label></li>
+							</ul>
+							<ul>
+								<li class="chk_wrap">
+									<input type="checkbox" name="managerType" value="sa" id="chk2">
+									<label for="chk2" class="chkbox"></label>
+								</li>
+								<li><label for="chk2">SALES</label></li>
+							</ul>
+							<ul>
+								<li class="chk_wrap">
+									<input type="checkbox" name="managerType" value="ma" id="chk3">
+									<label for="chk3" class="chkbox"></label>
+								</li>
+								<li><label for="chk3">SALES OF MATERIALS</label></li>
+							</ul>
+						</td>
+          </tr>
+          <!-- txtbox + btn  -->
+          <tr>
+            <th>Postal Code</th>
+            <td class="txtbtn" colspan="5">
+             <input type="text" name="" placeholder="Enter">
+             <span class="btn btn_b">Address Finder</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+       <!-- textarea  -->
+        <h4 class="s_title">ANSWER</h4>
+        <table class="list list_horizon">
+          <colgroup>
+            <col width="25%">
+            <col width="75%">
+          </colgroup>
+          <tbody>
+            <th>
+              CONTENT
+            </th>
+            <td class="txt_area">
+              <textarea name="" id="">1111</textarea>
+            </td>
+          </tbody>
+        </table>
+      <div class="btn_wrap">
+        <span class="btn btn_g">Cancel</span>
+        <span class="btn btn_m">Save</span>
+      </div>
+    </section>
+    <!-- section 끝 -->
+    <!-- nav 시작 -->
+    <nav>
+      <h1><a href="#none"></a></h1>
+      <ul class="main_menu">
+        <li class="on"><a href="#none"></a></li><!-- 메뉴 선택 시 class="on" -->
+        <li><a href="#none"></a></li>
+        <li><a href="#none"></a></li>
+      </ul>
+      <ul class="main_info">
+        <li><a href="#none"></a></li>
+        <li><a href="#none"></a></li>
+      </ul>
+    </nav>
+    <!-- nav 끝 -->
+    <footer>
+      Copyright&#x24D2;2024 TECHCROSS Ballast Water Monitoring System All rights reserved.
+    </footer>
+  </div>
+</body>
+
+</html>
